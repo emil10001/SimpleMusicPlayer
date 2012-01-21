@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.feigdev.backgroundsound.android;
+package com.lamerman;
 
 public final class R {
     public static final class attr {

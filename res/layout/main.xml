@@ -7,7 +7,7 @@
      <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:stretchColumns="0,1">
 
         <TableRow
@@ -53,14 +53,43 @@
         </TableRow>
         
         <TableRow
-            android:id="@+id/tableRow4"
+            android:id="@+id/tableRow5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
-            <Space android:layout_height="150px" />
+            <Space android:layout_height="50px" />
 
        </TableRow>  
+       </TableLayout>
+
+     <LinearLayout
+         android:id="@+id/linearLayout1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" >
+
+         <EditText
+             android:id="@+id/editPath"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1.25" />
+
+     </LinearLayout>
+
         
+            
+       
+      <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1">
+         
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<Space android:layout_height="150px" />
+			</TableRow>
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
@@ -70,13 +99,13 @@
                 android:id="@+id/playButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/play" android:layout_gravity="right"/>
+                android:src="@drawable/play"/>
 
             <ImageButton
                 android:id="@+id/stopButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/stop" android:layout_gravity="center"/>
+                android:src="@drawable/stop"/>
 
         </TableRow>
     </TableLayout>
