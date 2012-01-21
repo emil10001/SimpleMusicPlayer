@@ -4,6 +4,6 @@ SoundHandler Lib
 File Explorer android-file-dialog
 # svn checkout http://android-file-dialog.googlecode.com/svn/trunk/ android-file-dialog-read-only
 
-Basically, this is just a way to test the functionality of SoundHandler on a device. It is very basic, just gives two buttons and a couple status messages. It streams a test sound file from my server.
+Basically, this is just a way to test the functionality of SoundHandler on a device. It is very basic, just gives a few buttons and a couple status messages. It streams a test sound file from my server. Also allows user to select a file from the filesystem to play instead. Buttons 1, 2 and 3 are sound effects.
 
 Added ability to select an audio file from /sdcard.

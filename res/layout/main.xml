@@ -79,7 +79,7 @@
             
        
       <TableLayout
-        android:id="@+id/tableLayout1"
+        android:id="@+id/tableLayout2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:stretchColumns="0,1">
@@ -109,5 +109,40 @@
 
         </TableRow>
     </TableLayout>
+      <TableLayout
+        android:id="@+id/tableLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2">
+         
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<Space android:layout_height="50px" />
+			</TableRow>
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
+            <ImageButton
+                android:id="@+id/sfx1Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/one"/>
+			<ImageButton
+                android:id="@+id/sfx2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/two"/>
+			<ImageButton
+                android:id="@+id/sfx3Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/three"/>
+            
+
+        </TableRow>
+    </TableLayout>
 </LinearLayout>

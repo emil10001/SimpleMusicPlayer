@@ -1,7 +1,5 @@
 package com.feigdev.simplemusicplayer;
 
-import java.util.logging.Logger;
-
 import com.feigdev.backgroundsound.android.SoundHandler;
 import com.lamerman.FileDialog;
 
@@ -12,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -26,6 +23,9 @@ public class SimpleMusicPlayerActivity extends Activity implements OnClickListen
 	private TextView status;
 	private ImageButton play;
 	private ImageButton stop;
+	private ImageButton one;
+	private ImageButton two;
+	private ImageButton three;
 	private EditText path;
 	private boolean playing = false;
 	private final String TAG = "SimpleMusicPlayer";
@@ -46,6 +46,12 @@ public class SimpleMusicPlayerActivity extends Activity implements OnClickListen
         stop.setOnClickListener(this);
         path = (EditText)findViewById(R.id.editPath);
         path.setOnClickListener(this);
+        one = (ImageButton)findViewById(R.id.sfx1Button);
+        one.setOnClickListener(this);
+        two = (ImageButton)findViewById(R.id.sfx2Button);
+        two.setOnClickListener(this);
+        three = (ImageButton)findViewById(R.id.sfx3Button);
+        three.setOnClickListener(this);
         init();
     }
         
@@ -54,6 +60,10 @@ public class SimpleMusicPlayerActivity extends Activity implements OnClickListen
 		String path = "http://files.feigdev.com/test.ogg";
     	songName.setText(path);
 		sh.netInit(path);
+//		sh.localInitSfx(this, file, SoundHandler.SFX1);
+		sh.initSfx(this,R.raw.one,SoundHandler.SFX1);
+		sh.initSfx(this,R.raw.two,SoundHandler.SFX2);
+		sh.initSfx(this,R.raw.three,SoundHandler.SFX3);
 		status.setText("stopped");
     }
     
@@ -101,6 +111,15 @@ public class SimpleMusicPlayerActivity extends Activity implements OnClickListen
 			break;
 		case R.id.editPath:
 			fileGrab();
+			break;
+		case R.id.sfx1Button:
+			sh.playSfx(SoundHandler.SFX1);
+			break;
+		case R.id.sfx2Button:
+			sh.playSfx(SoundHandler.SFX2);
+			break;
+		case R.id.sfx3Button:
+			sh.playSfx(SoundHandler.SFX3);
 			break;
 		}
 	}
